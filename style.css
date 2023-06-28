@@ -1,0 +1,124 @@
+
+
+
+body, h1, p {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+
+    background-color: rgb(103, 160, 160);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 400px;
+    min-height: 200px;
+
+    background-color: white;
+    padding: 1em;
+    border-radius: 3px;
+}
+
+main > * {
+    margin-bottom: .5rem;
+}
+main > *:last-child {
+    margin-bottom: 0;
+}
+
+.input {
+    display: flex;
+}
+.input > input {
+    flex: 1 1 auto;
+    margin-right: 5px;
+    outline: none;
+}
+.input > button {
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+
+    cursor: pointer;
+}
+
+.todos {
+    height: 250px;
+    overflow-y: scroll;
+    padding: 5px 0;
+}
+.todos::-webkit-scrollbar {
+    display: none;
+}
+
+.todo {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: rgb(231, 221, 240);
+    padding: 10px 5px;
+    border-radius: 2px;
+    align-items: center;
+    position: relative;
+
+    cursor: pointer;
+}
+.todo > p {
+    flex: 1 1 auto;
+    pointer-events: none;
+}
+.complited {
+    text-decoration: line-through;
+    background-color: rgb(186, 171, 199);
+}
+.todo-remove {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.todo-remove > i {
+    pointer-events: none;
+}
+.todo:hover .todo-remove {
+    display: initial;
+}
+
+.info {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.info > p {
+    flex: 1 1 auto;
+}
+#clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+
+    cursor: pointer;
+    padding: 8px 10px;
+}
